@@ -3,12 +3,12 @@ mod validator;
 use crate::rule::ValidationRule;
 
 fn main() {
-    let rule1 = ValidationRule::<i32>::new(
+    let rule1 = ValidationRule::new(
         Box::new(|x: &i32| *x > 10),
         "Number should be greater than 10".to_string()
     );
 
-    let rule2 = ValidationRule::<i32>::new(
+    let rule2 = ValidationRule::new(
         Box::new(|x: &i32| *x > 25),
         "Number should be less than 25".to_string()
     );
